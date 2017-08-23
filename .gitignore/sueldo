@@ -1,0 +1,72 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+int main () {
+system("color F0");
+    int horaentrada,minentrada, segentrada, horasalida, minsalida, segsalida, resultadoh, resultadom,resultados;
+
+
+    cout<<"Hora de entrada en formato 24"<<endl;
+    cin>>horaentrada;
+
+    cout<<"Minutos de entrada:"<<endl;
+    cin>>minentrada;
+
+    cout<<"Segundos de salida:"<<endl;
+    cin>>segentrada;
+
+    cout<<"ENSEGUIDA MARQUE SU HORA DE SALIDA: Hora:"<<endl;
+    cin>>horasalida;
+
+    cout<<"Minutos de salida:"<<endl;
+    cin>>minsalida;
+
+    cout<<"Segundos de salida:"<<endl;
+    cin>>segsalida;
+
+        if(horaentrada<=23 && minsalida<=59)
+        {
+        if(segentrada <=59 && segsalida<=59)
+        {
+        if(horasalida<=23 && minsalida<=59)
+        {
+            resultadoh= horasalida-horaentrada;
+            resultadom= minsalida-minentrada;
+            resultados= segsalida-segentrada;
+        if(resultados<0)
+        {
+          resultados+=60;
+          resultadom-=1;
+        }
+        if(resultadom<0)
+        {
+            resultadom+=60,
+            resultadoh-=1;
+        }
+
+        if(resultadoh<0)
+        {
+            resultadoh+=24;
+        }
+
+
+
+        cout<<resultadoh<<":"<<resultadom<<":"<<resultados<<endl;
+
+        }
+        }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+ return 0;
+}
